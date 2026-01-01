@@ -1,1 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I'm Sorry, Sinu ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.95);
+      max-width: 520px;
+      padding: 30px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      color: #ff4d79;
+    }
+
+    .heart {
+      font-size: 42px;
+      animation: beat 1.4s infinite;
+    }
+
+    @keyframes beat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-top: 12px;
+      color: #333;
+    }
+
+    .note {
+      background: #fff0f4;
+      border: 1px dashed #ff8fa3;
+      padding: 14px;
+      border-radius: 16px;
+      margin: 18px 0;
+    }
+
+    .promise {
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .promise div {
+      background: #f7f7f7;
+      padding: 10px;
+      border-radius: 12px;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 12px 22px;
+      background: #ff4d79;
+      color: #fff;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 10px 25px rgba(255,77,121,0.4);
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: #ff2f64;
+    }
+
+    footer {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    /* Floating hearts */
+    .float-heart {
+      position: absolute;
+      bottom: -20px;
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.6;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); opacity: 0.7; }
+      to { transform: translateY(-110vh); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🎵 Background Music -->
+  <iframe width="0" height="0"
+    src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&loop=1&playlist=2Vv-BfVoq4g"
+    frameborder="0"
+    allow="autoplay">
+  </iframe>
+
+  <div class="card">
+    <div class="heart">❤️</div>
+    <h1>I'm Really Sorry, Sinu 💖</h1>
+
+    <p><strong>Hey…</strong></p>
+    <p>
+      Mujhse galti ho gayi. Jaan-bujhkar kabhi bhi tumhe hurt karna mera intention nahi tha.
+      Shayad words kam pad jaayein, par dil se keh raha hoon — <strong>I'm sorry.</strong>
+    </p>
+
+    <div class="note">
+      Tum meri life ka bahut important hissa ho. Tumhari ek smile mere din ko better bana deti hai,
+      aur tumhari narazgi mujhe andar se tod deti hai.
+    </div>
+
+    <p><strong>Main wada karta hoon:</strong></p>
+    <div class="promise">
+      <div>✨ Main dhyaan se sununga, react nahi karunga</div>
+      <div>✨ Tumhari feelings hamesha respect karunga</div>
+      <div>✨ Galti repeat nahi karunga — action se prove karunga</div>
+    </div>
+
+    <a class="btn" href="#">Please Forgive Me 🥺</a>
+
+    <footer>
+      — From someone who truly cares for you
+    </footer>
+  </div>
+
+  <!-- Floating hearts JS -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("float-heart");
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+
+    setInterval(createHeart, 400);
+  </script>
+
+</body>
+</html>
 
